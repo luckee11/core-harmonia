@@ -1,0 +1,13 @@
+<div class="auth-container">
+  <div class="form-box">
+    <h2>{{ isLogin ? 'Вход' : 'Регистрация' }}</h2>
+    <form>
+      <input type="email" placeholder="Email"/>
+      <input type="password" placeholder="Пароль"/>
+      <button type="submit" (click)="entrance()">{{ isLogin ? 'Войти' : 'Зарегистрироваться' }}</button>
+    </form>
+    <p (click)="toggleForm()">
+      {{ isLogin ? 'Нет аккаунта? Зарегистрируйтесь' : 'Уже есть аккаунт? Войти' }}
+    </p>
+  </div>
+</div>
