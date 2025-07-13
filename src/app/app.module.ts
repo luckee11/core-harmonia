@@ -3,22 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
-import { DiagramComponent } from './diagram/diagram.component';
-import { NgOptimizedImage } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { AuthComponent } from './auth/pages/auth/auth.component';
+import { RouterModule } from '@angular/router';
+import { providePrimeNG } from 'primeng/config';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import Aura from '@primeuix/themes/aura';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AuthComponent,
-    DiagramComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgOptimizedImage
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgOptimizedImage,
+        CommonModule,
+        AuthComponent,
+        RouterModule,
+
+    ],
+    providers: [
+        provideHttpClient(),
+        provideAnimationsAsync(),
+        providePrimeNG({
+            theme: {
+                preset: Aura
+            }
+        })
+    ],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

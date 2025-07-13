@@ -63,6 +63,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "proxyConfig": "proxy.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "core-harmonia-front:build:production"

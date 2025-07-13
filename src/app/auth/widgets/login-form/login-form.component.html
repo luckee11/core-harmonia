@@ -1,0 +1,15 @@
+<div class="login-wrapper">
+	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+		<h1>Вход</h1>
+
+		<input type="email" formControlName="email" placeholder="Email" />
+		<input type="password" formControlName="password" placeholder="Пароль" />
+
+		<button type="submit">Войти</button>
+
+		<div class="links">
+			<a href="#">Забыли пароль?</a>
+			<a href="#">Регистрация</a>
+		</div>
+	</form>
+</div>

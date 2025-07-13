@@ -1,6 +1,6 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -10,8 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Links */
-
 a, a:link, a:visited  {
   text-decoration: none;
 }
@@ -19,8 +17,6 @@ a, a:link, a:visited  {
 a:hover  {
   text-decoration: none;
 }
-
-/* Common */
 
 aside, nav, footer, header, section, main {
   display: block;
@@ -64,8 +60,7 @@ input::-ms-clear {
 button, input[type="submit"] {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
-  background: none;
+  background: transparent none;
   cursor: pointer;
 }
 
