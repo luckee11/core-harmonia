@@ -3,6 +3,7 @@ $bg-dark: #172646;
 $text-light: #e9eceb;
 $input-bg: #122943;
 $placeholder: #889ca8;
+@use 'sass:color';
 
 .login-wrapper {
   width: 100vw;
@@ -18,9 +19,9 @@ $placeholder: #889ca8;
   padding: 32px;
   width: 340px;
   border-radius: 12px;
-  box-shadow: -12px 11px 23px -6px rgba(14,21,38,0.53);
-  -webkit-box-shadow: -12px 11px 23px -6px rgba(14,21,38,0.53);
-  -moz-box-shadow: -12px 11px 23px -6px rgba(14,21,38,0.53);
+  box-shadow: -12px 11px 23px -6px rgba(14, 21, 38, 0.53);
+  -webkit-box-shadow: -12px 11px 23px -6px rgba(14, 21, 38, 0.53);
+  -moz-box-shadow: -12px 11px 23px -6px rgba(14, 21, 38, 0.53);
   display: flex;
   flex-direction: column;
   border: 1px solid #2b306c;
@@ -73,7 +74,7 @@ $placeholder: #889ca8;
 
       &:hover {
         text-decoration: none;
-        color: lighten($placeholder, 10%);
+        color: color.scale($placeholder, $lightness: 10%);
       }
     }
   }
