@@ -11,6 +11,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import Aura from '@primeuix/themes/aura';
 import { AuthModule } from './auth/auth.module';
 import { StoreModule } from '@ngrx/store';
+import { MessengerModule } from './messenger/messenger.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
 	declarations: [
@@ -23,6 +25,8 @@ import { StoreModule } from '@ngrx/store';
 		CommonModule,
 		RouterModule,
 		AuthModule,
+		MessengerModule,
+		MainModule
 	],
 	providers: [
 		provideHttpClient(),

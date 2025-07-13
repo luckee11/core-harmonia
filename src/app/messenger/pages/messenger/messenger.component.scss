@@ -1,0 +1,49 @@
+@use 'sass:color';
+
+.container {
+  background-image: url('/assets/neurons.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  .sidebar {
+    height: 100vh;
+    width: 260px;
+    background: #172646;
+    border-right: 1px solid #2b306c;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+      cursor: pointer;
+
+      &:hover {
+        background: color.scale(#172646, $lightness: 10%);
+      }
+    }
+  }
+
+  .layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .chat {
+      width: 50%;
+      height: 100vh;
+    }
+  }
+}
