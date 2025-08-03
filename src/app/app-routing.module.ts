@@ -14,7 +14,7 @@ const routes: Routes = [
 		component: AuthComponent,
 	},
 	{
-		path: 'messenger',
+		path: 'messenger/:type',
 		component: MessengerComponent
 	}
 ];

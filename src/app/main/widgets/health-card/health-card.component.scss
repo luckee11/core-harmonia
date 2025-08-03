@@ -1,0 +1,11 @@
+@use 'styles/variables' as *;
+
+.card {
+  background: $color-bg;
+  border-radius: $radius-md;
+  border-color: $color-border;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+}

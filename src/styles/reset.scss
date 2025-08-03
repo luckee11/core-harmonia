@@ -85,15 +85,3 @@ legend {
 input[type='file'] {
   max-width: 100%;
 }
-
-@font-face {
-  font-family: 'Futura';
-  src: url('./assets/fonts/futurabookc.woff2') format('woff2'),
-  url('./assets/fonts/futurabookc.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-* {
-  font-family: 'Futura', sans-serif;
-}

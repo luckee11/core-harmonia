@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use 'variables' as *;
+@import 'node_modules/primeflex/primeflex.css';
+
+.btn {
+  font-family: $font-main;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  border: none;
+  border-radius: $radius-md;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $color-accent;
+  color: $color-text-white;
+
+  &:hover {
+    background-color: color.scale($color-accent,  $lightness: -10%);
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background-color: transparent;
+  color: $color-text;
+  border: 1px solid $color-muted;
+
+  &:hover {
+    background-color: $color-muted;
+    color: $color-white;
+  }
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid $color-muted;
+  border-radius: $radius-md;
+  font-family: $font-main;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-card;
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    box-shadow: 0 0 0 2px rgba(126, 214, 164, 0.3);
+  }
+}
+
+.text-error {
+  color: $color-error;
+  font-size: $font-size-sm;
+  margin-top: 0.25rem;
+}
+
+.heading {
+  font-family: $font-main;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-lg;
+  color: $color-text;
+}
+
+.text-secondary {
+  color: $color-text;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Inter"),
+  url("../assets/fonts/Inter-Regular.otf") format("otf")
+}
+
+body {
+  font-family: $font-main;
+}

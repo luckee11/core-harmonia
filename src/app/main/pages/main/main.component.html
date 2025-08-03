@@ -1,25 +1,35 @@
-<div class="container p-d-flex">
-	<div class="center">
-		<div
-			(click)="openChat()"
-			class="common-card dream"
-		>
-			Сон
+
+<div class="container flex flex-column">
+	<app-header></app-header>
+
+	<div class="p-5">
+		<div class="text-3xl mb-5 text-secondary">
+			<p class="font-bold">
+				Здравствуй @if (true) {
+				, Дмитрий.
+			} @else {
+				.
+			}
+
+			</p>
+
+			<p class="">
+				Что ты хочешь обсудить сегодня?
+			</p>
 		</div>
 
-		<div class="common-card nutrition">
-			Питание
-		</div>
-		<div class="round">
-			Я
-		</div>
-
-		<div class="common-card hormones">
-			Гормоны
-		</div>
-
-		<div class="common-card psyche">
-			Психика
+		<div class="flex">
+			@for (card of cards$ | async; track card) {
+				<div class="mr-5">
+					<app-health-card
+						[icon]="chatIconByCategory[card.category]"
+						[isNew]="card.isNew"
+						[subTitle]="card.description"
+						[title]="card.title"
+						(healthCardEmit)="onHealthCard(card)"
+					></app-health-card>
+				</div>
+			}
 		</div>
 	</div>
 </div>

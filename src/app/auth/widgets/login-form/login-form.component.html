@@ -2,14 +2,18 @@
 	<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
 		<h1>Вход</h1>
 
-		<input type="email" formControlName="login" placeholder="Email" />
-		<input type="password" formControlName="password" placeholder="Пароль" />
+		<input type="email" formControlName="login" placeholder="Email" class="input-field mb-2" />
+		<input type="password" formControlName="password" placeholder="Пароль" class="input-field mb-2" />
 
-		<button type="submit">Войти</button>
+		<div class="flex w-full justify-content-end mb-2">
+			<p class="forgot-pass">Забыл пароль?</p>
+		</div>
 
-		<div class="links">
-			<a href="#">Забыли пароль?</a>
-			<a href="#">Регистрация</a>
+		<button class="btn btn-primary mb-3" type="submit">Войти</button>
+
+		<div class="flex justify-content-center">
+			<p>Нет аккаунта?&nbsp;</p>
+			<a class="sign-up cursor-pointer">Зарегистрироваться</a>
 		</div>
 	</form>
 </div>

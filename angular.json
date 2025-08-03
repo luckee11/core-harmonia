@@ -31,10 +31,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/reset.scss",
+              "src/styles/variables.scss"
             ],
             "scripts": [],
-            "browser": "src/main.ts"
+            "browser": "src/main.ts",
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            }
           },
           "configurations": {
             "production": {
@@ -96,7 +101,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/reset.scss",
+              "src/styles/variables.scss"
             ],
             "scripts": []
           }

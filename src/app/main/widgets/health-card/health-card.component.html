@@ -1,0 +1,16 @@
+<button
+	class="card border-1 flex flex-column align-items-start p-3 w-12rem h-12rem text-secondary"
+	(click)="openChat()"
+>
+	<div class="flex w-full justify-content-between mb-3">
+		<img [ngSrc]="'assets/chats-category-icons/' + icon" alt="" width="50" height="50">
+
+		@if (isNew) {
+			<img [ngSrc]="''" alt="">
+		}
+	</div>
+
+	<p class="mb-3 w-full text-left font-bold">{{title}}</p>
+
+	<p class="w-full text-left">{{subTitle}}</p>
+</button>
