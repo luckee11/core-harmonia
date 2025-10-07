@@ -1,16 +1,31 @@
 <button
-	class="card border-1 flex flex-column align-items-start p-3 w-12rem h-12rem text-secondary"
+	class="p-5 text-card-foreground bg-indigo-50 border-round-xl
+	flex flex-column cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg overflow-hidden relative
+"
 	(click)="openChat()"
 >
-	<div class="flex w-full justify-content-between mb-3">
-		<img [ngSrc]="'assets/chats-category-icons/' + icon" alt="" width="50" height="50">
+  <div class="flex">
+    <div class="h-3rem w-3rem p-3 border-circle bg-gradient-to-r from-indigo-400 to-purple-400 text-white mr-2 flex align-items-center justify-content-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon size-6" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+      </svg>
+    </div>
 
-		@if (isNew) {
-			<img [ngSrc]="''" alt="">
-		}
-	</div>
+    <div class="flex flex-column">
+      <p class="w-full text-left text-lg">{{title}}</p>
 
-	<p class="mb-3 w-full text-left font-bold">{{title}}</p>
+      <p class="w-full text-left">{{subTitle}}</p>
+    </div>
+  </div>
 
-	<p class="w-full text-left">{{subTitle}}</p>
+  <div class="flex justify-content-between mt-3">
+    <span class="bg-secondary text-secondary-foreground text-xs px-1 border-round-lg">
+      AI-помощник
+    </span>
+
+    <i class="pi pi-comment"></i>
+  </div>
+
+
+<!--  <span class="absolute top-0 right-0">скоро</span>-->
 </button>

@@ -1,0 +1,19 @@
+.text-button {
+  background: #fff !important;
+  border-color: var(--color-slate-200);
+  border-radius: 8px;
+
+  button {
+    background: #fff !important;
+    border-color: var(--color-slate-200);
+    border-radius: 8px;
+    color: var(--foreground);
+    font-size: 0.8rem;
+
+    &:hover {
+      color: var(--accent-foreground)!important;
+      background-color: var(--accent)!important;
+      border-color: var(--accent)!important;
+    }
+  }
+}
