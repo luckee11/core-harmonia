@@ -20,6 +20,7 @@
       			<app-health-card
               [title]="'Сон'"
               [subTitle]="'Качество сна и циркадные ритмы'"
+              (healthCardEmit)="onHealthCard(card)"
             ></app-health-card>
       	}
       </div>

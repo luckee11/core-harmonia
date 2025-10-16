@@ -1,10 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-health-card',
 	imports: [
-		NgOptimizedImage,
 	],
   templateUrl: './health-card.component.html',
   styleUrl: './health-card.component.scss'

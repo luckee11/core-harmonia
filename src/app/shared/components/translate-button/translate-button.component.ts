@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import {Button} from "primeng/button";
 import {SplitButton} from "primeng/splitbutton";
 import {MenuItem, MenuItemCommandEvent} from "primeng/api";
 
 @Component({
   selector: 'app-translate-button',
   imports: [
-    Button,
     SplitButton
   ],
   templateUrl: './translate-button.component.html',

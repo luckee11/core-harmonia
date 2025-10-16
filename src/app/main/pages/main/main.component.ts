@@ -14,7 +14,6 @@ import { ChatService } from '../../../messenger/services/chat.service';
 	imports: [
 		HeaderComponent,
 		HealthCardComponent,
-		AsyncPipe,
 	],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
@@ -33,22 +32,21 @@ export class MainComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.healthCardService.getHealthCards();
-
 	}
 
 	onHealthCard(card: HealthCard): void {
-		if (!card.hasChat) {
-			this.chatService.createChat(card.category, card.id).subscribe(() => {
-				this.navigateToChat(card);
-			})
-
-			return;
-		}
+		// if (!card?.hasChat) {
+		// 	this.chatService.createChat(card.category, card.id).subscribe(() => {
+		// 		this.navigateToChat(card);
+		// 	})
+    //
+		// 	return;
+		// }
 
 		this.navigateToChat(card);
 	}
 
 	private navigateToChat(card: HealthCard): void {
-		this.router.navigate(['messenger', card.category]).catch();
+		this.router.navigate(['messenger/test']).catch();
 	}
 }

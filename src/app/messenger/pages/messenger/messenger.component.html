@@ -1,20 +1,90 @@
-<div class="container">
-	<div class="sidebar">
-		<a>Сон</a>
-		<a>Питание</a>
-		<a>Психика</a>
-		<a>Гормоны</a>
-	</div>
+<div class="bg-blue-50 h-screen flex flex-column justify-content-between">
+  <header class="container-header w-full flex justify-content-center bg-white">
+    <div class="header h-5rem flex justify-content-between align-items-center">
+      <div class="flex align-items-center">
+        <button
+          pButton
+          [outlined]="true"
+          rounded
+          class="border-0 p-0"
+          (click)="back()"
+        >
+          <i pButtonIcon class="pi pi-arrow-left text-xs text-card-foreground"></i>
+        </button>
 
-	<div class="layout">
-		<div class="chat">
-			<div class="chat-message">
+        <div class="flex flex-column">
+          <h4 class="text-lg">AI-помощник: Сон</h4>
+          <p class="p-0 text-sm">AI-помощник готов помочь</p>
+        </div>
+      </div>
+      <div class="flex justify-content-end align-items-center">
+        <app-translate-button></app-translate-button>
+      </div>
+    </div>
+  </header>
 
-			</div>
+  <main class="w-full flex justify-content-center h-full p-3">
+    <div class="main flex flex-column overflow-y-auto">
+      @for (message of messages; track message) {
+        <div
+          class="max-w-19rem flex mb-2"
+          [ngClass]="message.direction === 'outcome' ? 'align-self-start' : 'align-self-end'"
+        >
+          <!--        <div class="mr-2 p-2 border-round"></div>-->
 
-			<div class="chat-text">
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-			</div>
-		</div>
-	</div>
+          <div class="bg-white border-round-xl shadow-sm">
+            <div class="text-card-foreground m-3">
+              <p class="mb-2 text-sm">{{message.text}}</p>
+
+              <div
+                class="flex align-items-center"
+                [ngClass]="message.direction === 'outcome' ? 'justify-content-between' : 'justify-content-end'"
+              >
+                <p class="text-xs ">{{message.date | date: 'HH:mm'}}</p>
+
+                @if (message.direction === 'outcome') {
+                  <button pButton [outlined]="true" class="border-0 p-0">
+                    <i pButtonIcon class="pi pi-save text-xs text-card-foreground"></i>
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--        <div class="align-self-end max-w-19rem flex">-->
+<!--          <div class="shadow-sm bg-white border-round-xl flex">-->
+<!--            <div class="text-card-foreground m-3">-->
+<!--              <p class="mb-2 text-sm">AI-помощник готов помочь</p>-->
+
+<!--              <div class="flex align-items-center justify-content-end">-->
+<!--                <p class="text-xs">23:06</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+          <!--        <div class="border-round bg-blue-500 ml-2 p-2">-->
+          <!--          <i class="pi pi-user"></i>-->
+          <!--        </div>-->
+<!--        </div>-->
+      }
+    </div>
+  </main>
+
+  <footer class="container-footer w-full flex justify-content-center bg-white p-3">
+    <div class="footer flex justify-content-between align-items-center flex-column">
+      <div
+        class="h-2rem w-full bg-blue-50 border-blue-200 border-1 border-50 border-round-xl flex justify-content-center align-items-center mb-2">
+        <span class="text-blue-800 text-xs p-1">
+          CoreHarmonia не&nbsp;заменяет врача и&nbsp;не&nbsp;ставит диагнозы. При тревожных симптомах обратитесь к&nbsp;врачу.
+        </span>
+      </div>
+
+      <div class="flex w-full align-items-center">
+        <input type="text" pInputText placeholder="Напишите ваш вопрос..." class="input-field w-full mr-1"/>
+
+        <p-button icon="pi pi-send" styleClass="bg-blue-500 border-none"></p-button>
+      </div>
+    </div>
+  </footer>
 </div>
