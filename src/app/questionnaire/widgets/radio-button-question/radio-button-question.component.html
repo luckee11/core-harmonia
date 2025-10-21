@@ -1,0 +1,10 @@
+<div class="">
+  <p>Как вы оцениваете свое общее состояние здоровья?</p>
+
+  @for (variant of question.payload; track variant.value) {
+    <div class="flex items-center gap-2">
+      <p-radio-button [inputId]="variant.value" name="test" [(ngModel)]="selectedValue" [value]="variant.value"/>
+      <label [for]="variant.value"> {{ variant.label }} </label>
+    </div>
+  }
+</div>
