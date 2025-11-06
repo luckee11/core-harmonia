@@ -4,7 +4,7 @@ import {TranslateButtonComponent} from "../../../shared/components/translate-but
 import {RouterLink} from "@angular/router";
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
-import {RadioButtonQuestionComponent} from "../../widgets/radio-button-question/radio-button-question.component";
+import {CheckboxQuestionComponent} from "../../widgets/checkbox-question/checkbox-question.component";
 
 
 @Component({
@@ -16,8 +16,8 @@ import {RadioButtonQuestionComponent} from "../../widgets/radio-button-question/
     RouterLink,
     ProgressBarModule,
     ToastModule,
-    RadioButtonQuestionComponent,
-    ButtonLabel
+    ButtonLabel,
+    CheckboxQuestionComponent
   ],
   templateUrl: './questionnaire.component.html',
   styleUrl: './questionnaire.component.scss'

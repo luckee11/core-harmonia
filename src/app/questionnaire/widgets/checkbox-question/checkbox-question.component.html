@@ -1,0 +1,6 @@
+@for (variant of question; track $index) {
+  <div class="flex items-center gap-2 mb-2">
+    <p-check-box [inputId]="variant.value" [binary]="false" [value]="variant.value"></p-check-box>
+    <label [for]="variant.value">{{variant.label}}</label>
+  </div>
+}
