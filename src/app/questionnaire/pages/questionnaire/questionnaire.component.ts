@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ButtonDirective, ButtonIcon} from "primeng/button";
+import {ButtonDirective, ButtonIcon, ButtonLabel} from "primeng/button";
 import {TranslateButtonComponent} from "../../../shared/components/translate-button/translate-button.component";
 import {RouterLink} from "@angular/router";
 import { ProgressBarModule } from 'primeng/progressbar';
@@ -16,7 +16,8 @@ import {RadioButtonQuestionComponent} from "../../widgets/radio-button-question/
     RouterLink,
     ProgressBarModule,
     ToastModule,
-    RadioButtonQuestionComponent
+    RadioButtonQuestionComponent,
+    ButtonLabel
   ],
   templateUrl: './questionnaire.component.html',
   styleUrl: './questionnaire.component.scss'

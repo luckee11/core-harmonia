@@ -26,6 +26,25 @@
   </header>
 
   <main class="w-full flex justify-content-center h-full p-3">
-    <app-radio-button-question></app-radio-button-question>
+    <div class="bg-white p-4 border-round-2xl shadow-lg h-fit">
+      <p class="font-medium text-lg mb-3">Как вы оцениваете свое общее состояние здоровья?</p>
+
+      <app-radio-button-question></app-radio-button-question>
+
+      <div class="flex justify-content-between mt-5">
+        <button pButton [outlined]="true" class="border-300">
+          <span class="flex align-items-center">
+            <span pButtonIcon class="pi pi-arrow-left text-xs text-300"></span>
+            <span pButtonLabel class="ml-3 text-sm text-300">Назад</span>
+          </span>
+        </button>
+        <button pButton>
+          <span class="flex align-items-center">
+            <span pButtonLabel class="mr-3 text-sm">Далее</span>
+            <span pButtonIcon class="pi pi-arrow-right text-xs"></span>
+          </span>
+        </button>
+      </div>
+    </div>
   </main>
 </div>
