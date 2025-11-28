@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../sevices/login.service';
@@ -17,6 +17,7 @@ import {ButtonModule} from "primeng/button";
 	templateUrl: './login-form.component.html',
 	styleUrl: './login-form.component.scss',
 	standalone: true,
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginFormComponent implements OnInit {
 	loginForm: any;

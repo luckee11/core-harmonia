@@ -6,7 +6,7 @@ import { ChatIconByCategory } from '../../main.enums';
 import { HealthCardService } from '../../services/health-card.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { HealthCard } from '../../interfaces/HealthCard';
+import { HealthCard } from '../../types/HealthCard';
 import { ChatService } from '../../../messenger/services/chat.service';
 
 @Component({

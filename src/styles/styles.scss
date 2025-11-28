@@ -1,7 +1,11 @@
 @use 'sass:color';
-@use 'variables' as *;
 @use 'styles/override-prime-components/input' as *;
 @use 'styles/override-prime-components/button' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'node_modules/primeflex/primeflex.css';
 @import "primeicons/primeicons.css";
 

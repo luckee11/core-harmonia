@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DataProvider } from '../../../shared/services/data-provider.service';
 import { finalize, Observable, tap } from 'rxjs';
-import { Login } from '../interfaces/Login';
+import { Login } from '../types/Login';
 
 @Injectable({
 	providedIn: 'root',

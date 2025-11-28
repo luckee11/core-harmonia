@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { DataProvider } from '../../../shared/services/data-provider.service';
 import { finalize, Observable, tap } from 'rxjs';
-import { HealthCardState } from '../interfaces/HealthCardState';
-import { HealthCard } from '../interfaces/HealthCard';
+import { HealthCardState } from '../types/HealthCardState';
+import { HealthCard } from '../types/HealthCard';
 
 @Injectable({
   providedIn: 'root'

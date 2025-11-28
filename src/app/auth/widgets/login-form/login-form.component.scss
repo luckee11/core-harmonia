@@ -1,32 +1,8 @@
-.container {
-  background: var(--color-purple-50);
+@use "./styles/components/devider";
 
-  .divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    &::before,
-    &::after {
-      padding-top: 2px;
-      content: "";
-      flex: 1;
-      border-bottom: 1px solid #ccc;
-    }
-
-    span {
-      padding: 0 1rem;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-  }
-}
-
-::ng-deep {
-  .service-connect-button {
-    height: 32px!important;
-    background: #FFFFFF!important;
-    border-color: var(--color-slate-200)!important;
-    color: var(--foreground)!important;
-  }
+.service-connect-button {
+  height: 32px!important;
+  background: #FFFFFF!important;
+  border-color: var(--color-slate-200)!important;
+  color: var(--foreground)!important;
 }

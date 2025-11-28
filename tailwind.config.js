@@ -1,0 +1,160 @@
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts,scss}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        orange: {
+          50: 'var(--color-orange-50)',
+          200: 'var(--color-orange-200)',
+          400: 'var(--color-orange-400)',
+          500: 'var(--color-orange-500)',
+          600: 'var(--color-orange-600)',
+          700: 'var(--color-orange-700)',
+          800: 'var(--color-orange-800)',
+        },
+        amber: {
+          50: 'var(--color-amber-50)',
+          100: 'var(--color-amber-100)',
+          200: 'var(--color-amber-200)',
+          400: 'var(--color-amber-400)',
+          800: 'var(--color-amber-800)',
+        },
+        yellow: {
+          400: 'var(--color-yellow-400)',
+        },
+        green: {
+          50: 'var(--color-green-50)',
+          100: 'var(--color-green-100)',
+          200: 'var(--color-green-200)',
+          400: 'var(--color-green-400)',
+          500: 'var(--color-green-500)',
+          600: 'var(--color-green-600)',
+          700: 'var(--color-green-700)',
+          800: 'var(--color-green-800)',
+        },
+        emerald: {
+          50: 'var(--color-emerald-50)',
+          400: 'var(--color-emerald-400)',
+        },
+        teal: {
+          50: 'var(--color-teal-50)',
+          400: 'var(--color-teal-400)',
+        },
+        cyan: {
+          50: 'var(--color-cyan-50)',
+          400: 'var(--color-cyan-400)',
+        },
+        blue: {
+          50: 'var(--color-blue-50)',
+          100: 'var(--color-blue-100)',
+          200: 'var(--color-blue-200)',
+          300: 'var(--color-blue-300)',
+          400: 'var(--color-blue-400)',
+          500: 'var(--color-blue-500)',
+          600: 'var(--color-blue-600)',
+          700: 'var(--color-blue-700)',
+          800: 'var(--color-blue-800)',
+        },
+        indigo: {
+          50: 'var(--color-indigo-50)',
+          400: 'var(--color-indigo-400)',
+        },
+        violet: {
+          400: 'var(--color-violet-400)',
+        },
+        purple: {
+          50: 'var(--color-purple-50)',
+          100: 'var(--color-purple-100)',
+          300: 'var(--color-purple-300)',
+          400: 'var(--color-purple-400)',
+          500: 'var(--color-purple-500)',
+          600: 'var(--color-purple-600)',
+          700: 'var(--color-purple-700)',
+        },
+        pink: {
+          50: 'var(--color-pink-50)',
+          100: 'var(--color-pink-100)',
+          400: 'var(--color-pink-400)',
+          500: 'var(--color-pink-500)',
+          600: 'var(--color-pink-600)',
+        },
+        rose: {
+          400: 'var(--color-rose-400)',
+        },
+        slate: {
+          50: 'var(--color-slate-50)',
+          200: 'var(--color-slate-200)',
+          300: 'var(--color-slate-300)',
+          400: 'var(--color-slate-400)',
+          500: 'var(--color-slate-500)',
+          600: 'var(--color-slate-600)',
+          700: 'var(--color-slate-700)',
+          900: 'var(--color-slate-900)',
+        },
+        gray: {
+          100: 'var(--color-gray-100)',
+          400: 'var(--color-gray-400)',
+        },
+        black: 'var(--color-black)',
+        white: 'var(--color-white)',
+        accent: 'var(--accent)',
+        accentForeground: 'var(--accent-foreground)',
+        secondary: 'var(--secondary)',
+        secondaryForeground: 'var(--secondary-foreground)',
+      },
+      spacing: {
+        sm: 'var(--spacing)',
+        'container-md': 'var(--container-md)',
+        'container-lg': 'var(--container-lg)',
+        'container-2xl': 'var(--container-2xl)',
+        'container-3xl': 'var(--container-3xl)',
+        'container-4xl': 'var(--container-4xl)',
+        'container-6xl': 'var(--container-6xl)',
+      },
+      fontFamily: {
+        sans: 'var(--font-sans)',
+        mono: 'var(--font-mono)',
+      },
+      fontSize: {
+        xs: ['var(--text-xs)', 'var(--text-xs--line-height)'],
+        sm: ['var(--text-sm)', 'var(--text-sm--line-height)'],
+        base: ['var(--text-base)', 'var(--text-base--line-height)'],
+        lg: ['var(--text-lg)', 'var(--text-lg--line-height)'],
+        xl: ['var(--text-xl)', 'var(--text-xl--line-height)'],
+        '2xl': ['var(--text-2xl)', 'var(--text-2xl--line-height)'],
+        '3xl': ['var(--text-3xl)', 'var(--text-3xl--line-height)'],
+        '4xl': ['var(--text-4xl)', 'var(--text-4xl--line-height)'],
+        '5xl': ['var(--text-5xl)', 'var(--text-5xl--line-height)'],
+        '6xl': ['var(--text-6xl)', 'var(--text-6xl--line-height)'],
+      },
+      borderRadius: {
+        xs: 'var(--radius-xs)',
+      },
+      lineHeight: {
+        tight: 'var(--leading-tight)',
+        relaxed: 'var(--leading-relaxed)',
+      },
+      transitionDuration: {
+        DEFAULT: 'var(--default-transition-duration)',
+      },
+      transitionTimingFunction: {
+        DEFAULT: 'var(--default-transition-timing-function)',
+      },
+      backgroundColor: theme => ({
+        input: 'var(--input-background)',
+        card: 'var(--card-foreground)',
+      }),
+      textColor: theme => ({
+        foreground: 'var(--foreground)',
+      }),
+      fontWeight: {
+        normal: 'var(--font-weight-normal)',
+        medium: 'var(--font-weight-medium)',
+        semibold: 'var(--font-weight-semibold)',
+      },
+    },
+  },
+  plugins: [],
+}
