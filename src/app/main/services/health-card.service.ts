@@ -17,7 +17,7 @@ export class HealthCardService extends DataProvider<Partial<HealthCardState>> {
   getHealthCards(): void {
     this.setState({isHealthCardsLoading: true});
 
-    this.http.get<HealthCard[]>(`api/v1/subjects`).pipe(
+    this.http.get<HealthCard[]>(`api/v1/account/${'fsdfds'}/subjects`).pipe(
         tap(cards => this.setState({cards})),
         finalize(() => this.setState({ isHealthCardsLoading: false })),
     ).subscribe()

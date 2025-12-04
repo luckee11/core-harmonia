@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    display: false
+  },
   content: [
     "./src/**/*.{html,ts,scss}",
   ],
@@ -154,6 +157,9 @@ module.exports = {
         medium: 'var(--font-weight-medium)',
         semibold: 'var(--font-weight-semibold)',
       },
+      display: {
+        "d-grid": 'grid',
+      }
     },
   },
   plugins: [],

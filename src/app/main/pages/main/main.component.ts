@@ -11,10 +11,11 @@ import { ChatService } from '../../../messenger/services/chat.service';
 
 @Component({
   selector: 'app-main',
-	imports: [
-		HeaderComponent,
-		HealthCardComponent,
-	],
+  imports: [
+    HeaderComponent,
+    HealthCardComponent,
+    AsyncPipe,
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

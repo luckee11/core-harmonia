@@ -15,11 +15,12 @@
         <p class="text-slate-600">Начните чат с&nbsp;AI-ассистентом по&nbsp;интересующей вас теме</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      	@for (card of [].constructor(8); track card) {
+      <div class="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      	@for (card of cards$ | async; track card) {
       			<app-health-card
-              [title]="'Сон'"
-              [subTitle]="'Качество сна и циркадные ритмы'"
+              [title]="card.title"
+              [subTitle]="card.description"
+              [icon]="card.category"
               (healthCardEmit)="onHealthCard(card)"
             ></app-health-card>
       	}

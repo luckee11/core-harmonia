@@ -13,12 +13,10 @@ export class LoginService extends DataProvider<any> {
 		super({});
 	}
 
-	entrance(body: Login): Observable<void> {
+	entrance(body: Login): any {
 		this.setState({isEntranceLoading: true});
 
-		console.log(body);
-
-		return this.http.post<void>(`api/account/login`, body).pipe(
+		return this.http.post<void>(`api/v1/account/login`, body).pipe(
 			tap(() => this.setState({loginInfo: body})),
 			finalize(() => this.setState({ isEntranceLoading: false })),
 		)

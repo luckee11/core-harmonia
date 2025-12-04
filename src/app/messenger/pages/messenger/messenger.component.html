@@ -9,7 +9,7 @@
           class="border-0 p-0"
           (click)="back()"
         >
-          <i pButtonIcon class="pi pi-arrow-left text-xs text-card-foreground"></i>
+          <i pButtonIcon class="pi pi-arrow-left text-xs text-accentForeground"></i>
         </button>
 
         <div class="flex flex-column">
@@ -33,7 +33,7 @@
           <!--        <div class="mr-2 p-2 border-round"></div>-->
 
           <div class="bg-white border-round-xl shadow-sm">
-            <div class="text-card-foreground m-3">
+            <div class="text-accentForeground m-3">
               <p class="mb-2 text-sm">{{message.text}}</p>
 
               <div
@@ -44,7 +44,7 @@
 
                 @if (message.direction === 'outcome') {
                   <button pButton [outlined]="true" class="border-0 p-0">
-                    <i pButtonIcon class="pi pi-save text-xs text-card-foreground"></i>
+                    <i pButtonIcon class="pi pi-save text-xs text-accentForeground"></i>
                   </button>
                 }
               </div>

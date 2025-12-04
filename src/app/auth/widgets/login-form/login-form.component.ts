@@ -37,8 +37,8 @@ export class LoginFormComponent implements OnInit {
 	}
 
 	onSubmit(): void {
-		// this.loginService.entrance(this.loginForm.value).subscribe(() => {
+		this.loginService.entrance(this.loginForm.value).subscribe(() => {
 			this.router.navigate(['/']);
-		// })
+		})
 	}
 }
