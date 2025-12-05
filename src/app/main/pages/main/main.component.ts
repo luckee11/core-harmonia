@@ -36,18 +36,18 @@ export class MainComponent implements OnInit {
 	}
 
 	onHealthCard(card: HealthCard): void {
-		// if (!card?.hasChat) {
-		// 	this.chatService.createChat(card.category, card.id).subscribe(() => {
-		// 		this.navigateToChat(card);
-		// 	})
-    //
-		// 	return;
-		// }
+		if (!card?.hasChat) {
+			this.chatService.createChat(card.category, card.id).subscribe(() => {
+				this.navigateToChat(card);
+			})
+
+			return;
+		}
 
 		this.navigateToChat(card);
 	}
 
 	private navigateToChat(card: HealthCard): void {
-		this.router.navigate(['messenger/test']).catch();
+		this.router.navigate(['messenger', card.category]).catch();
 	}
 }

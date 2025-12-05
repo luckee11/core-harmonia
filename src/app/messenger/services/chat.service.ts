@@ -13,6 +13,6 @@ export class ChatService extends DataProvider<any>{
   }
 
   createChat(category: keyof typeof ChatIconByCategory, cardId: string): Observable<void> {
-    return this.http.post<void>(`api/v1/subject/${cardId}/chat/${category}/create`, {})
+    return this.http.post<void>(`api/v1/account/id/subject/${cardId}/chat/${category}/create`, {})
   }
 }

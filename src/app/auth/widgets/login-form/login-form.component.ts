@@ -5,6 +5,7 @@ import { LoginService } from '../../sevices/login.service';
 import {InputText} from "primeng/inputtext";
 import {PasswordDirective} from "primeng/password";
 import {ButtonModule} from "primeng/button";
+import {switchMap} from "rxjs";
 
 @Component({
 	selector: 'app-login-form',
@@ -37,7 +38,9 @@ export class LoginFormComponent implements OnInit {
 	}
 
 	onSubmit(): void {
-		this.loginService.entrance(this.loginForm.value).subscribe(() => {
+		this.loginService.entrance(this.loginForm.value).pipe(
+      switchMap(() => this.loginService.getUserInfo())
+    ).subscribe(() => {
 			this.router.navigate(['/']);
 		})
 	}
