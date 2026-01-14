@@ -10,7 +10,7 @@ import {catchError, Observable, retry, switchMap, throwError} from "rxjs";
 export function authInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
   const loginService = inject(LoginService);
   const token = localStorage.getItem("access_token");
-  const isAuthEndpoint = (url: string) => url.endsWith('/account/login') || url.endsWith('/api/account/refresh');
+  const isAuthEndpoint = (url: string) => url.endsWith('account/login') || url.endsWith('account/refresh');
 
   if (token && !isAuthEndpoint(req.url)) {
     req = req.clone({
